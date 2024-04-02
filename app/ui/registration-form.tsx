@@ -5,11 +5,11 @@ import { redirect } from 'next/navigation';
 
 export default function RegistrationForm() {
 
-  async function handleSubmit(formData) {
+  async function handleSubmit(formData: FormData) {
     'use server';
-    const hashedPassword = await bcrypt.hash(formData.get('password'), 10);
-    const name = await formData.get('name');
-    const email = await formData.get('email');
+    const hashedPassword = bcrypt.hash(formData.get('password'), 10) as string;
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
 
     console.log(hashedPassword);
     console.log(name);
