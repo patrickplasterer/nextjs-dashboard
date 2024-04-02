@@ -63,7 +63,7 @@ export default function LoginForm() {
         </div>
         <LoginButton />
         <div className='mt-4'>
-          Don't have an account? <Link className='font-medium text-decoration-line: underline hover:font-semibold' href="/register">Sign up here</Link>.
+          Don\'t have an account? <Link className='font-medium text-decoration-line: underline hover:font-semibold' href="/register">Sign up here</Link>.
         </div>
         <div
           className="flex h-8 items-end space-x-1"
